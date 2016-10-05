@@ -45,3 +45,17 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Cocos2dx proj folders
+cocos2d
+proj.android
+proj.android-studio
+proj.ios_mac
+proj.linux
+proj.tizen
+proj.visualstudio
+proj.win8.1-universal
+proj.win10
+proj.win32
+.cocos-project.json
+CMakeLists.txt
