@@ -35,6 +35,10 @@ bool GameScene::init()
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 	Point center = Point(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y);
 
+	audio = CocosDenshion::SimpleAudioEngine::getInstance();
+	audio->preloadEffect("land.wav");
+	audio->preloadEffect("starFloor.wav");
+
 	auto backgroundSprite = Sprite::create("background.png");
 	//backgroundSprite->setAnchorPoint(Vec2(0.5, 0.5));
 	backgroundSprite->setPosition(Point((origin.x + visibleSize.width) / 2, (origin.y + visibleSize.height) / 2));
@@ -96,6 +100,7 @@ bool GameScene::init()
 	//ninja->setContentSize(Size(80, 80));
 	//auto ninjaBody = PhysicsBody::createBox(ninja->getContentSize(), PhysicsMaterial(0,0,0));
 	//playerNode->setPhysicsBody(ninjaBody);
+	ninja->setTag(100);
 	playerNode->addChild(ninja);
 
 	this->scheduleUpdate();
@@ -160,10 +165,27 @@ bool GameScene::onContactBegin(PhysicsContact &contact)
 	if (shapeABody->getGroup() == SHURIKEN_GROUP) {
 		shapeABody->removeFromWorld();
 		shapeABody->getOwner()->pause();
+		audio->playEffect("starFloor.wav");
+	}
+	else if (shapeABody->getGroup() == PLAYER_GROUP) {
+		if (shapeBBody->getGroup() == PLATFORM_GROUP || shapeBBody->getGroup() == GROUND_GROUP) {
+			ninja->setGrounded(true);
+			shapeABody->setVelocity(Vec2(0, 0));
+			//audio->playEffect("land.wav");
+		}
+		//shapeABody->setVelocity(Vec2(0, 0));
 	}
 	if (shapeBBody->getGroup() == SHURIKEN_GROUP) {
 		shapeBBody->removeFromWorld();
 		shapeBBody->getOwner()->pause();
+		audio->playEffect("starFloor.wav");
+	}
+	else if (shapeBBody->getGroup() == PLAYER_GROUP) {
+		if (shapeABody->getGroup() == PLATFORM_GROUP || shapeABody->getGroup() == GROUND_GROUP) {
+			ninja->setGrounded(true);
+			shapeBBody->setVelocity(Vec2(0, 0));
+			//shapeBBody->setVelocity(Vec2(0, 0));
+		}
 	}
 	//PhysicsBody *a = contact.getShapeA
 	return true;

@@ -49,32 +49,18 @@
 			<key>Ninja_jumpatk4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,226},{65,76}}</string>
+				<string>{{0,381},{61,74}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{65,76}}</string>
+				<string>{{0,0},{61,74}}</string>
 				<key>sourceSize</key>
-				<string>{65,76}</string>
+				<string>{61,74}</string>
 			</dict>
 
 			<key>Ninja_jumpatk5.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{0,303},{62,77}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false/>
-				<key>sourceColorRect</key>
-				<string>{{0,0},{62,77}}</string>
-				<key>sourceSize</key>
-				<string>{62,77}</string>
-			</dict>
-
-			<key>Ninja_jumpatk6.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,152},{71,73}}</string>
@@ -88,18 +74,32 @@
 				<string>{71,73}</string>
 			</dict>
 
-			<key>Ninja_jumpatk7.png</key>
+			<key>Ninja_jumpatk6.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{0,381},{61,74}}</string>
+				<string>{{0,303},{62,77}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
 				<false/>
 				<key>sourceColorRect</key>
-				<string>{{0,0},{61,74}}</string>
+				<string>{{0,0},{62,77}}</string>
 				<key>sourceSize</key>
-				<string>{61,74}</string>
+				<string>{62,77}</string>
+			</dict>
+
+			<key>Ninja_jumpatk7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,226},{65,76}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false/>
+				<key>sourceColorRect</key>
+				<string>{{0,0},{65,76}}</string>
+				<key>sourceSize</key>
+				<string>{65,76}</string>
 			</dict>
 
 			<key>Ninja_subthrow1.png</key>
@@ -119,7 +119,7 @@
 			<key>Ninja_subthrow2.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{62,447},{60,64}}</string>
+				<string>{{62,381},{60,64}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -175,7 +175,7 @@
 			<key>Ninja_throw4.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{62,381},{60,65}}</string>
+				<string>{{62,446},{60,65}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>

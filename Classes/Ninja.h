@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "Definitions.h"
+#include "SimpleAudioEngine.h" 
 
 class Ninja : public cocos2d::Sprite
 {
@@ -19,6 +20,8 @@ public:
 	void undown();
 
 	void attack();
+
+	void setGrounded(bool grounded);
 
 	void update();
 
@@ -38,6 +41,8 @@ private:
 	bool isIdle = true;
 	bool downHold = false;
 	bool attackFinish = true;
+	bool jumpAttacking = false;
+	bool subJumpAttack = false;
 
 	cocos2d::PhysicsBody * idleBody;
 	cocos2d::PhysicsBody * runBody;
@@ -48,9 +53,13 @@ private:
 	cocos2d::Animate * landAnimate;
 
 	cocos2d::Animate * attackAnimate;
+	cocos2d::Animate * jumpattackAnimate;
+	cocos2d::Animate * subjumpattackAnimate;
 	//cocos2d::Animate * shurikenAnimate;
 
 	//bool isBusy;
+
+	CocosDenshion::SimpleAudioEngine * audio;
 
 };
 

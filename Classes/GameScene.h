@@ -36,6 +36,8 @@ private:
 
 	cocos2d::Label *scoreLabel;
 
+	CocosDenshion::SimpleAudioEngine * audio;
+
 };
 
 #endif // __GAME_SCENE_H__
